@@ -1,4 +1,3 @@
-import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pet_app/theme/color.dart';
@@ -26,6 +25,9 @@ class NotificationBox extends StatelessWidget {
         ),
         child: notifiedNumber > 0
             ? Badge(
+                label: Text('3'),
+                child: Icon(Icons.settings),
+              ) /* Badge(
                 badgeColor: AppColor.actionColor,
                 padding: EdgeInsets.all(3),
                 position: BadgePosition.topEnd(top: -3, end: -3),
@@ -38,7 +40,7 @@ class NotificationBox extends StatelessWidget {
                   width: 25,
                   height: 25,
                 ),
-              )
+              ) */
             : SvgPicture.asset("assets/icons/bell.svg"),
       ),
     );
